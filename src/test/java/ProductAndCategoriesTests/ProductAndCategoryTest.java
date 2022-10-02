@@ -58,7 +58,7 @@ public class ProductAndCategoryTest extends Pages {
         filterPage.resetFilter();
         List<ProductPage> productsWithOutFiltration = productGridPage.getListOfProducts();
 
-        assertThat(products.size()).isNotEqualTo(productsWithOutFiltration.size());
+        assertThat(products.size()).isLessThanOrEqualTo(productsWithOutFiltration.size());
 
     }
 

@@ -4,33 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22a64a02-7fa6-4d9f-9e3c-f8573dff23ec" name="Changes" comment="fixed problem with custom exception">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exceptions/NoSuchMenuNameException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Helpers/WebElementsHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/MyShop/NavMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Category/CategoryPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Category/FilterPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Home/HeaderTopPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Product/ProductDetailsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Product/ProductGridPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Product/ProductPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ProductAndCategoriesTests/ProductAndCategoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/SearchTests/SearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="22a64a02-7fa6-4d9f-9e3c-f8573dff23ec" name="Changes" comment="fixes after Mateusz comments.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Driver/Manager/ChromeDriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Driver/Manager/ChromeDriverManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/User/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/User/UserFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/BasePage/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/BasePage/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Category/ArtPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Category/Category.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HomePage/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HomePage/ProductsGridPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HomePage/TopMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Home/HeaderNavigationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ProductAndCategoriesTests/CategoriesAndFiltersTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SearchTests/SearchPageTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase/Pages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ProductAndCategoriesTests/ProductAndCategoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProductAndCategoriesTests/ProductAndCategoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,22 +64,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.SearchTest.dropDownTest">
-    <configuration name="ProductAndCategoryTest.asa" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project-with-darek" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ProductAndCategoriesTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ProductAndCategoriesTests" />
-      <option name="MAIN_CLASS_NAME" value="ProductAndCategoriesTests.ProductAndCategoryTest" />
-      <option name="METHOD_NAME" value="asa" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ProductAndCategoryTest.checkIfCategoryHaveCorrectNameWhenOpened" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project-with-darek" />
       <extension name="coverage">
@@ -115,6 +75,22 @@
       <option name="PACKAGE_NAME" value="ProductAndCategoriesTests" />
       <option name="MAIN_CLASS_NAME" value="ProductAndCategoriesTests.ProductAndCategoryTest" />
       <option name="METHOD_NAME" value="checkIfCategoryHaveCorrectNameWhenOpened(int)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductAndCategoryTest.checkIfFilterIsWorkingCorrectly (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project-with-darek" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProductAndCategoriesTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ProductAndCategoriesTests" />
+      <option name="MAIN_CLASS_NAME" value="ProductAndCategoriesTests.ProductAndCategoryTest" />
+      <option name="METHOD_NAME" value="checkIfFilterIsWorkingCorrectly(int,int)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -172,9 +148,9 @@
       <list>
         <item itemvalue="JUnit.SearchTest.dropDownTest" />
         <item itemvalue="JUnit.SearchTest.searchForRandomProduct" />
-        <item itemvalue="JUnit.ProductAndCategoryTest.checkIfFilterIsWorkingCorrectly" />
+        <item itemvalue="JUnit.ProductAndCategoryTest.checkIfFilterIsWorkingCorrectly (1)" />
         <item itemvalue="JUnit.ProductAndCategoryTest.checkIfCategoryHaveCorrectNameWhenOpened" />
-        <item itemvalue="JUnit.ProductAndCategoryTest.asa" />
+        <item itemvalue="JUnit.ProductAndCategoryTest.checkIfFilterIsWorkingCorrectly" />
       </list>
     </recent_temporary>
   </component>
@@ -313,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663934818050</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fixes after Mateusz comments.">
+      <created>1664706415059</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1664706415059</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -334,6 +317,22 @@
     <MESSAGE value="new type of switch" />
     <MESSAGE value="fixes after Darek tips" />
     <MESSAGE value="fixed problem with custom exception" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed problem with custom exception" />
+    <MESSAGE value="fixes after Mateusz comments." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes after Mateusz comments." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ProductAndCategoriesTests/ProductAndCategoryTest.java</url>
+          <line>45</line>
+          <properties class="ProductAndCategoriesTests.ProductAndCategoryTest" method="checkIfFilterIsWorkingCorrectly">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
