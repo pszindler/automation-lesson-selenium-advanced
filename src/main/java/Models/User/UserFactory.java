@@ -1,4 +1,4 @@
-package Models;
+package Models.User;
 
 import com.github.javafaker.Faker;
 
@@ -17,10 +17,10 @@ public class UserFactory {
 
     public static User generateMateuszUser() {
         return new User.UserBuilder()
-                .withFirstName("Mateusz")
-                .withLastName("Tadla")
-                .withEmail("mtadla@sii.pl")
-                .withPassword("lubiePlacki88")
+                .withFirstName("Jan")
+                .withLastName("Kowalski")
+                .withEmail("jkowalski@sii.pl")
+                .withPassword("t4jn3h@slo!")
                 .withBirthday("12/23/1990").build();
     }
 }

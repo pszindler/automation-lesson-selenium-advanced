@@ -1,43 +1,48 @@
 package Pages.BasePage;
 
-import Pages.HomePage.Product;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 import java.util.List;
 import java.util.Random;
 
 public class BasePage {
 
-    static final Duration TIMEOUT = Duration.ofSeconds(Long.parseLong(System.getProperty("webElementTimeout")));
+    static final Duration TIMEOUT = Duration.ofSeconds(Integer.parseInt(System.getProperty("webElementTimeout")));
+    static final Duration POOLING = Duration.ofMillis(Integer.parseInt(System.getProperty("webElementPooling")));
+
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected Actions actions;
 
     public BasePage(WebDriver driver) {
-        this.driver = driver;
+        initDriver(driver);
         PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, TIMEOUT);
+    }
+
+    public BasePage(WebDriver driver, WebElement element) {
+        initDriver(driver);
+        PageFactory.initElements(new DefaultElementLocatorFactory(element), this);
+    }
+
+    private void initDriver(WebDriver driver) {
+        this.driver = driver;
+        wait = new WebDriverWait(driver, TIMEOUT, POOLING);
         actions = new Actions(driver);
     }
 
-    public Product pickRandomWebElement(List<Product> elements) {
-        int index = new Random().nextInt(elements.size()-1);
-        return elements.get(index);
+    public void pointOnElement(WebElement element) {
+        actions.moveToElement(element).perform();
     }
 
-    public List<WebElement> getVisibleElements(List<WebElement> elements) {
-        wait.until(ExpectedConditions.visibilityOfAllElements(elements));
-        return elements;
+    public <T> T getRandomWebElement (List<T> list) {
+        return list.get(new Random().nextInt(list.size()));
     }
 
-    public WebElement getVisibleElement(WebElement el) {
-        wait.until(ExpectedConditions.visibilityOf(el));
-        return el;
-    }
+
+
 }

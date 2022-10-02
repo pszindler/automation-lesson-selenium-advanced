@@ -1,6 +1,4 @@
-package Models;
-
-import java.util.Date;
+package Models.User;
 
 public class User {
     private String firstName;

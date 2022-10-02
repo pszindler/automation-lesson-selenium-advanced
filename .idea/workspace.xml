@@ -5,17 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22a64a02-7fa6-4d9f-9e3c-f8573dff23ec" name="Changes" comment="fixed problem with custom exception">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Category/ArtPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Category/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/HomePage/TopMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ProductAndCategoriesTests/CategoriesAndFiltersTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exceptions/NoSuchMenuNameException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Helpers/WebElementsHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Models/MyShop/NavMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Category/CategoryPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Category/FilterPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Home/HeaderTopPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Product/ProductDetailsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Product/ProductGridPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Product/ProductPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ProductAndCategoriesTests/ProductAndCategoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SearchTests/SearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Driver/Manager/ChromeDriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Driver/Manager/ChromeDriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/User/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/User/UserFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pages/BasePage/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/BasePage/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HomePage/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/HomePage/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HomePage/ProductsGridPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/HomePage/ProductsGridPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HomePage/TopHomePageMenuPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SearchTests/SearchPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SearchTests/SearchPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Category/ArtPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Category/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HomePage/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HomePage/ProductsGridPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HomePage/TopMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Home/HeaderNavigationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ProductAndCategoriesTests/CategoriesAndFiltersTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SearchTests/SearchPageTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestBase/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase/Pages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +48,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/4.1.2/selenium-support-4.1.2-sources.jar!/org/openqa/selenium/support/FindBy.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -44,17 +62,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_directory_selection": "C:/Development/SzkolenieTesterskie/SeleniumModernTester/automation-lesson-selenium-advanced/src/test/java",
+    "last_opened_file_path": "C:/Development/SzkolenieTesterskie/SeleniumModernTester/automation-lesson-selenium-advanced",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.file-colors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Models" />
@@ -67,9 +87,9 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CategoriesAndFiltersTest.iterateThroughCategoriesTest">
-    <configuration name="CategoriesAndFiltersTest.filterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="automation-lesson-yaml-properties" />
+  <component name="RunManager" selected="JUnit.SearchTest.dropDownTest">
+    <configuration name="ProductAndCategoryTest.asa" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project-with-darek" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ProductAndCategoriesTests.*" />
@@ -77,15 +97,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ProductAndCategoriesTests" />
-      <option name="MAIN_CLASS_NAME" value="ProductAndCategoriesTests.CategoriesAndFiltersTest" />
-      <option name="METHOD_NAME" value="filterTest" />
+      <option name="MAIN_CLASS_NAME" value="ProductAndCategoriesTests.ProductAndCategoryTest" />
+      <option name="METHOD_NAME" value="asa" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoriesAndFiltersTest.iterateThroughCategoriesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="automation-lesson-yaml-properties" />
+    <configuration name="ProductAndCategoryTest.checkIfCategoryHaveCorrectNameWhenOpened" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project-with-darek" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ProductAndCategoriesTests.*" />
@@ -93,15 +113,31 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ProductAndCategoriesTests" />
-      <option name="MAIN_CLASS_NAME" value="ProductAndCategoriesTests.CategoriesAndFiltersTest" />
-      <option name="METHOD_NAME" value="iterateThroughCategoriesTest" />
+      <option name="MAIN_CLASS_NAME" value="ProductAndCategoriesTests.ProductAndCategoryTest" />
+      <option name="METHOD_NAME" value="checkIfCategoryHaveCorrectNameWhenOpened(int)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchPageTest.checkIfDropDownAppearsWithAutoSuggestion (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="automation-lesson-yaml-properties" />
+    <configuration name="ProductAndCategoryTest.checkIfFilterIsWorkingCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project-with-darek" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProductAndCategoriesTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ProductAndCategoriesTests" />
+      <option name="MAIN_CLASS_NAME" value="ProductAndCategoriesTests.ProductAndCategoryTest" />
+      <option name="METHOD_NAME" value="checkIfFilterIsWorkingCorrectly" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchTest.dropDownTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project-with-darek" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="SearchTests.*" />
@@ -109,15 +145,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="SearchTests" />
-      <option name="MAIN_CLASS_NAME" value="SearchTests.SearchPageTest" />
-      <option name="METHOD_NAME" value="checkIfDropDownAppearsWithAutoSuggestion" />
+      <option name="MAIN_CLASS_NAME" value="SearchTests.SearchTest" />
+      <option name="METHOD_NAME" value="dropDownTest(java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchPageTest.checkIfDropDownAppearsWithAutoSuggestion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="automation-lesson-yaml-properties" />
+    <configuration name="SearchTest.searchForRandomProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project-with-darek" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="SearchTests.*" />
@@ -125,18 +161,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="SearchTests" />
-      <option name="MAIN_CLASS_NAME" value="SearchTests.SearchPageTest" />
-      <option name="METHOD_NAME" value="checkIfDropDownAppearsWithAutoSuggestion(java.lang.String)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchPageTest.searchForItemFromHomePageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="automation-lesson-yaml-properties" />
-      <option name="PACKAGE_NAME" value="SearchTests" />
-      <option name="MAIN_CLASS_NAME" value="SearchTests.SearchPageTest" />
-      <option name="METHOD_NAME" value="searchForItemFromHomePageTest" />
+      <option name="MAIN_CLASS_NAME" value="SearchTests.SearchTest" />
+      <option name="METHOD_NAME" value="searchForRandomProduct" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -144,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CategoriesAndFiltersTest.iterateThroughCategoriesTest" />
-        <item itemvalue="JUnit.CategoriesAndFiltersTest.filterTest" />
-        <item itemvalue="JUnit.SearchPageTest.checkIfDropDownAppearsWithAutoSuggestion (1)" />
-        <item itemvalue="JUnit.SearchPageTest.searchForItemFromHomePageTest" />
-        <item itemvalue="JUnit.SearchPageTest.checkIfDropDownAppearsWithAutoSuggestion" />
+        <item itemvalue="JUnit.SearchTest.dropDownTest" />
+        <item itemvalue="JUnit.SearchTest.searchForRandomProduct" />
+        <item itemvalue="JUnit.ProductAndCategoryTest.checkIfFilterIsWorkingCorrectly" />
+        <item itemvalue="JUnit.ProductAndCategoryTest.checkIfCategoryHaveCorrectNameWhenOpened" />
+        <item itemvalue="JUnit.ProductAndCategoryTest.asa" />
       </list>
     </recent_temporary>
   </component>
@@ -309,16 +335,5 @@
     <MESSAGE value="fixes after Darek tips" />
     <MESSAGE value="fixed problem with custom exception" />
     <option name="LAST_COMMIT_MESSAGE" value="fixed problem with custom exception" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ProductAndCategoriesTests/CategoriesAndFiltersTest.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
