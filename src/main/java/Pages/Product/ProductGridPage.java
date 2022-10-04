@@ -2,6 +2,7 @@ package Pages.Product;
 
 import Pages.BasePage.BasePage;
 import lombok.Getter;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,10 +22,15 @@ public class ProductGridPage extends BasePage {
         return productItems.size();
     }
 
-    public List<ProductPage> getListOfProducts() {
-        List<ProductPage> products = new ArrayList<>();
-        productItems.forEach(p -> products.add(new ProductPage(driver, p)));
+    public List<SingleProductFromGrid> getListOfProducts() {
+        List<SingleProductFromGrid> products = new ArrayList<>();
+        productItems.forEach(p -> products.add(new SingleProductFromGrid(driver, p)));
         return products;
+    }
+
+    public ProductGridPage clickOnProductByName(String productName) {
+        driver.findElement(By.linkText(productName)).click();
+        return this;
     }
 
 }

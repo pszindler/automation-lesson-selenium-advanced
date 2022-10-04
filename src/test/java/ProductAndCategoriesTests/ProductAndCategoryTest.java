@@ -5,7 +5,7 @@ import Pages.Category.CategoryPage;
 import Pages.Category.FilterPage;
 import Pages.Home.HeaderNavigationPage;
 import Pages.Product.ProductGridPage;
-import Pages.Product.ProductPage;
+import Pages.Product.SingleProductFromGrid;
 import TestBase.Pages;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -39,8 +39,6 @@ public class ProductAndCategoryTest extends Pages {
         });
     }
 
-
-
     @ParameterizedTest
     @MethodSource("intsListProvider")
     void checkIfFilterIsWorkingCorrectly(int minPrice, int maxPrice) {
@@ -50,13 +48,13 @@ public class ProductAndCategoryTest extends Pages {
 
         headerNavigationPage.goToCategory("ACCESSORIES");
         filterPage.moveSliderToPrice(minPrice, maxPrice);
-        List<ProductPage> products = productGridPage.getListOfProducts();
-        for (ProductPage product: products) {
+        List<SingleProductFromGrid> products = productGridPage.getListOfProducts();
+        for (SingleProductFromGrid product: products) {
             assertThat(product.getProductPrice()).isGreaterThan(minPrice);
             assertThat(product.getProductPrice()).isLessThan(maxPrice);
         }
         filterPage.resetFilter();
-        List<ProductPage> productsWithOutFiltration = productGridPage.getListOfProducts();
+        List<SingleProductFromGrid> productsWithOutFiltration = productGridPage.getListOfProducts();
 
         assertThat(products.size()).isLessThanOrEqualTo(productsWithOutFiltration.size());
 

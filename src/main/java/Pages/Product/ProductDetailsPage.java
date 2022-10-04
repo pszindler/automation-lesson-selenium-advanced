@@ -15,9 +15,23 @@ public class ProductDetailsPage extends BasePage {
     private WebElement productTitle;
     @FindBy(css = "[itemprop='price']")
     private WebElement productPrice;
+    @FindBy(css = "input#quantity_wanted")
+    private WebElement quantity;
+    @FindBy(css = ".add-to-cart.btn.btn-primary")
+    private WebElement addToCartButton;
 
     public String getProductTitle() {
         wait.until(ExpectedConditions.visibilityOf(productTitle));
         return productTitle.getText();
+    }
+
+    public ProductDetailsPage addToCart() {
+        addToCartButton.click();
+        return this;
+    }
+
+    public ProductDetailsPage setQuantity(String quantity) {
+        this.quantity.sendKeys(quantity);
+        return this;
     }
 }
