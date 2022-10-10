@@ -1,15 +1,18 @@
 package Models.MyShop;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+@Data
+@AllArgsConstructor
+@EqualsAndHashCode
 public class Product {
     String title;
     double price;
-    int quantity;
-    double totalProductPrice;
 
-    public Product(String title, double price, int quantity) {
+    public Product(String title, String price) {
         this.title = title;
-        this.price = price;
-        this.quantity = quantity;
-        this.totalProductPrice = this.price * this.quantity;
+        this.price = Double.parseDouble(price.replace("$", ""));
     }
 }

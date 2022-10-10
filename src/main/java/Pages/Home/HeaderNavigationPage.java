@@ -9,13 +9,12 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import static Helpers.WebElementsHelper.isElementVisible;
-
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 
+import static Helpers.WebElementsHelper.isElementVisible;
 
 
 public class HeaderNavigationPage extends BasePage {
@@ -35,6 +34,8 @@ public class HeaderNavigationPage extends BasePage {
     private WebElement searchInput;
     @FindBy(css = "li.ui-menu-item .product")
     private List<WebElement> productsAutocomplete;
+    @FindBy(css = "[alt='TesterSii']")
+    private WebElement myStoreHomePage;
 
 
     private void initMenu() {
@@ -73,17 +74,17 @@ public class HeaderNavigationPage extends BasePage {
     }
 
     public CategoryPage getCategoryPage(NavMenu navmenu) {
-            if (navmenu.getParent() == null) {
+        if (navmenu.getParent() == null) {
+            selectCategory(navmenu.getCategoryName());
+        } else {
+            WebElement categoryWebElement =
+                    findCategoryNameElement(navmenu.getParent().getCategoryName());
+            pointOnElement(categoryWebElement);
+            if (!isElementVisible(popOverSubMenu)) {
                 selectCategory(navmenu.getCategoryName());
-            } else {
-                WebElement categoryWebElement =
-                        findCategoryNameElement(navmenu.getParent().getCategoryName());
-                pointOnElement(categoryWebElement);
-                if (!isElementVisible(popOverSubMenu)) {
-                    selectCategory(navmenu.getCategoryName());
-                }
             }
-            return new CategoryPage(driver);
+        }
+        return new CategoryPage(driver);
     }
 
     public void goToCategory(String categoryName) {
@@ -91,6 +92,10 @@ public class HeaderNavigationPage extends BasePage {
                 .findFirst()
                 .orElseThrow(() -> new NoSuchMenuNameException(categoryName))
                 .getHref());
+    }
+
+    public void goToRandomCategory() {
+        driver.get(menu.get(new Random().nextInt(menu.size())).getHref());
     }
 
     public void selectCategory(String categoryName) {
@@ -116,7 +121,7 @@ public class HeaderNavigationPage extends BasePage {
 
     public WebElement findCategoryNameElement(String categoryName) {
         String categoryId = menu.stream().filter(c -> c.getCategoryName()
-                .equalsIgnoreCase(categoryName))
+                        .equalsIgnoreCase(categoryName))
                 .findFirst().orElse(null).getId();
         return driver.findElement(By.id(categoryId));
     }
@@ -145,5 +150,9 @@ public class HeaderNavigationPage extends BasePage {
 
     public List<String> getAutocompleteSuggestItems() {
         return productsAutocomplete.stream().map(WebElement::getText).collect(Collectors.toList());
+    }
+
+    public void goToHomePage() {
+        myStoreHomePage.click();
     }
 }

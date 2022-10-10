@@ -9,11 +9,13 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class ProductGridPage extends BasePage {
     public ProductGridPage(WebDriver driver) {
         super(driver);
     }
+
     @Getter
     @FindBy(css = ".products.row > div")
     private List<WebElement> productItems;
@@ -31,6 +33,14 @@ public class ProductGridPage extends BasePage {
     public ProductGridPage clickOnProductByName(String productName) {
         driver.findElement(By.linkText(productName)).click();
         return this;
+    }
+
+    public void getRandomProduct() {
+        List<SingleProductFromGrid> products = getListOfProducts();
+        String title = products
+                .get(new Random().nextInt(products.size()))
+                .getProductTitle();
+        clickOnProductByName(title);
     }
 
 }
