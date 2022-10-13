@@ -47,7 +47,7 @@ public class BasketTest extends Pages {
         assertThat(pro.getPrice()).isEqualTo(at(SummaryPopupPage.class).getProductPrice());
         assertThat(shoppingCart.get(pro)).isEqualTo(at(SummaryPopupPage.class).getProductQuantity());
         assertThat(pro.getTitle()).isEqualTo(at(SummaryPopupPage.class).getProductName());
-//        assertThat(shoppingCart.getSubTotalItemPrice()).isEqualTo(at(SummaryPopupPage.class).getSubTotal());
+        assertThat(shoppingCart.getTotalOrderValue()).isEqualTo(at(SummaryPopupPage.class).getSubTotal());
 
         if (quantity == 1) {
             assertThat("There is " + quantity + " item in your cart.").isEqualTo(at(SummaryPopupPage.class).getTotalItemsInCartText());
@@ -64,13 +64,14 @@ public class BasketTest extends Pages {
     @Test
     void basketCheckTest() {
         // tworzenie koszyka
-        ShoppingCart shoppingCart = new ShoppingCart();
-        while (shoppingCart.size() != 5) {
+        ShoppingCart actualShoppingCart = new ShoppingCart();
+        ShoppingCart expectedShoppingCart = new ShoppingCart();
+        while (actualShoppingCart.size() != 5) {
             at(HeaderNavigationPage.class).goToRandomCategory();
             at(ProductGridPage.class).getRandomProduct();
             int quantity = at(ProductDetailsPage.class).setRandomQuantity();
             Product pro = at(ProductDetailsPage.class).addToCart(quantity);
-            shoppingCart.addItem(pro, quantity);
+            actualShoppingCart.addItem(pro, quantity);
             at(SummaryPopupPage.class).continueShopping();
 
         }
@@ -78,15 +79,14 @@ public class BasketTest extends Pages {
         // przejscie do koszyka
         at(CartPage.class).goToCart();
         List<CartProduct> cartProducts = at(CartPage.class).getListOfProductsInCart();
-        for (Map.Entry<Product, Integer> item : shoppingCart.entrySet()) {
-            CartProduct product = at(CartPage.class).getProductFromCartByName(cartProducts, item.getKey().getTitle());
-
-            assertThat(product.getProductTitle()).isEqualTo(item.getKey().getTitle());
-            assertThat(product.getProductPrice()).isEqualTo(item.getKey().getPrice());
-            assertThat(product.getQuantity()).isEqualTo(item.getValue());
-            assertThat(product.getSubTotalPrice()).isEqualTo(DoubleRounder.round(item.getValue() * item.getKey().getPrice(), 2));
+        for (CartProduct product : cartProducts) {
+            Product prod = new Product(product);
+            expectedShoppingCart.addItem(prod, product.getQuantity());
         }
-        assertThat(shoppingCart.getTotalOrderValue()).isEqualTo(at(CartPage.class).totalItemsPrice());
+
+        assertThat(actualShoppingCart).usingRecursiveComparison().isEqualTo(expectedShoppingCart);
+        assertThat(actualShoppingCart.getTotalOrderValue()).isEqualTo(at(CartPage.class).totalItemsPrice());
+
 
         // usuwanie koszyka
         for (int i = 0; i < 5; i++) {
@@ -94,29 +94,25 @@ public class BasketTest extends Pages {
             String productNameToDelete = cartProducts.get(0).getProductTitle();
             cartProducts.get(0).deleteItem();
             Product productToDelete = null;
-            for (Map.Entry<Product, Integer> item : shoppingCart.entrySet()) {
+            for (Map.Entry<Product, Integer> item : actualShoppingCart.entrySet()) {
                 if (item.getKey().getTitle().equals(productNameToDelete)) {
                     productToDelete = item.getKey();
                 }
             }
-            shoppingCart.deleteItem(productToDelete);
 
-            // weryfikacja koszyka po usunieciu
-            List<CartProduct> cartProducts1 = at(CartPage.class).getListOfProductsInCart();
-            if (shoppingCart.size() > 0) {
-                for (Map.Entry<Product, Integer> item : shoppingCart.entrySet()) {
-                    CartProduct product = at(CartPage.class).getProductFromCartByName(cartProducts1, item.getKey().getTitle());
-
-                    assertThat(product.getProductTitle()).isEqualTo(item.getKey().getTitle());
-                    assertThat(product.getProductPrice()).isEqualTo(item.getKey().getPrice());
-                    assertThat(product.getQuantity()).isEqualTo(item.getValue());
-                    assertThat(product.getSubTotalPrice()).isEqualTo(DoubleRounder.round(item.getValue() * item.getKey().getPrice(), 2));
-                }
+            ShoppingCart expectedShoppingCartAfterDelete = new ShoppingCart();
+            cartProducts = at(CartPage.class).getListOfProductsInCart();
+            for (CartProduct product : cartProducts) {
+                Product prod = new Product(product);
+                expectedShoppingCartAfterDelete.addItem(prod, product.getQuantity());
             }
-            assertThat(shoppingCart.getTotalOrderValue()).isEqualTo(at(CartPage.class).totalItemsPrice());
+            actualShoppingCart.deleteItem(productToDelete);
+
+            assertThat(actualShoppingCart).usingRecursiveComparison().isEqualTo(expectedShoppingCartAfterDelete);
+            assertThat(actualShoppingCart.getTotalOrderValue()).isEqualTo(at(CartPage.class).totalItemsPrice());
 
             // weryfikacja pustego koszyka
-            if (shoppingCart.size() == 0) {
+            if (expectedShoppingCartAfterDelete.size() == 0) {
                 assertThat(at(CartPage.class).getEmptyCartLabel()).isEqualTo("There are no more items in your cart");
             }
         }
@@ -125,7 +121,7 @@ public class BasketTest extends Pages {
     @Test
     void checkOutTest() {
         Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
         String dateNow = formatter.format(date);
         ShoppingCart shoppingCart = new ShoppingCart();
         User john = UserFactory.generateJohn();

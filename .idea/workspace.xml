@@ -4,28 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22a64a02-7fa6-4d9f-9e3c-f8573dff23ec" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/MyShop/ShoppingCart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Account/OrderHistoryPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Account/OrderHistoryRow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Cart/CartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Cart/CartProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Checkout/AddressesPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Checkout/ConfirmationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Checkout/PaymentPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Checkout/ShippingMethodPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Home/SignInPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Steps/ShoppingCartSteps.java" afterDir="false" />
+    <list default="true" id="22a64a02-7fa6-4d9f-9e3c-f8573dff23ec" name="Changes" comment="final">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Models/MyShop/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/MyShop/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/User/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/User/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/User/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/User/UserFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Cart/SummaryPopupPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Cart/SummaryPopupPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Home/HeaderNavigationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Home/HeaderNavigationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Home/HeaderTopPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Home/HeaderTopPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Product/ProductDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Product/ProductDetailsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Product/ProductGridPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Product/ProductGridPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BasketAndCheckoutTests/BasketTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasketAndCheckoutTests/BasketTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +64,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BasketTest.checkOutTest">
+  <component name="RunManager" selected="JUnit.BasketTest.popupCheckTest">
     <configuration name="BasketTest.basketCheckTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project-with-darek" />
       <extension name="coverage">
@@ -111,6 +92,22 @@
       <option name="PACKAGE_NAME" value="BasketAndCheckoutTests" />
       <option name="MAIN_CLASS_NAME" value="BasketAndCheckoutTests.BasketTest" />
       <option name="METHOD_NAME" value="checkOutTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BasketTest.popupCheckTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project-with-darek" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="BasketAndCheckoutTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="BasketAndCheckoutTests" />
+      <option name="MAIN_CLASS_NAME" value="BasketAndCheckoutTests.BasketTest" />
+      <option name="METHOD_NAME" value="popupCheckTest(int)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,29 +145,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BasketTest.sds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project-with-darek" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="BasketAndCheckoutTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="BasketAndCheckoutTests" />
-      <option name="MAIN_CLASS_NAME" value="BasketAndCheckoutTests.BasketTest" />
-      <option name="METHOD_NAME" value="sds" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BasketTest.checkOutTest" />
+        <item itemvalue="JUnit.BasketTest.popupCheckTest" />
         <item itemvalue="JUnit.BasketTest.basketCheckTest" />
+        <item itemvalue="JUnit.BasketTest.checkOutTest" />
         <item itemvalue="JUnit.BasketTest.sdas" />
         <item itemvalue="JUnit.BasketTest.sds (1)" />
-        <item itemvalue="JUnit.BasketTest.sds" />
       </list>
     </recent_temporary>
   </component>
@@ -330,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664869588422</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="final">
+      <created>1665437307573</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1665437307573</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -353,7 +341,8 @@
     <MESSAGE value="fixes after Mateusz comments." />
     <MESSAGE value="assertion fix" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="final" />
+    <option name="LAST_COMMIT_MESSAGE" value="final" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
