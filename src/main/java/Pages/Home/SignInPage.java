@@ -1,5 +1,6 @@
 package Pages.Home;
 
+import Models.User.User;
 import Pages.BasePage.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,11 +17,11 @@ public class SignInPage extends BasePage {
     private WebElement passwordInput;
     @FindBy(css = "button#submit-login")
     private WebElement signInBtn;
-    private final String signInLink = "http://146.59.32.4/index.php?controller=authentication&back=my-account";
 
-    public void signIn(String email, String password) {
-        emailInput.sendKeys(email);
-        passwordInput.sendKeys(password);
+
+    public void signIn(User user) {
+        emailInput.sendKeys(user.getEmail());
+        passwordInput.sendKeys(user.getPassword());
         signInBtn.click();
     }
 

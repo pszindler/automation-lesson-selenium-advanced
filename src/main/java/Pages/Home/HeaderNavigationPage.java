@@ -14,8 +14,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
-import static Helpers.WebElementsHelper.isElementVisible;
-
 
 public class HeaderNavigationPage extends BasePage {
     public HeaderNavigationPage(WebDriver driver) {

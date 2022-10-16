@@ -28,11 +28,11 @@ public class CartProduct extends BasePage {
     }
 
     public double getProductPrice() {
-        return Double.parseDouble(productPrice.getText().replace("$", ""));
+        return getProductPrice(productPrice);
     }
 
     public double getSubTotalPrice() {
-        return Double.parseDouble(subTotalPrice.getText().replace("$", ""));
+        return getProductPrice(subTotalPrice);
     }
 
     public int getQuantity() {
@@ -44,7 +44,6 @@ public class CartProduct extends BasePage {
         deleteIcon.click();
         wait.until(ExpectedConditions.invisibilityOf(deleteIcon));
     }
-
 
     @Override
     public String toString() {

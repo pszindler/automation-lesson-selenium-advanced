@@ -1,5 +1,6 @@
 package Pages.BasePage;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -41,6 +42,22 @@ public class BasePage {
 
     public <T> T getRandomWebElement (List<T> list) {
         return list.get(new Random().nextInt(list.size()));
+    }
+
+    public boolean isElementVisible(WebElement element) {
+        try {
+            return element.isDisplayed();
+        } catch (NoSuchElementException ex) {
+            return false;
+        }
+    }
+
+    public double getProductPrice(WebElement webElement) {
+        return Double.parseDouble(webElement.getText().replace("$", ""));
+    }
+
+    public String getTextAfterColon(WebElement webElement) {
+        return webElement.getText().split(":")[1].strip();
     }
 
 

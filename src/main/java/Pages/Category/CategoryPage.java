@@ -5,12 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import static Helpers.WebElementsHelper.isElementVisible;
-
 public class CategoryPage extends BasePage {
     public CategoryPage(WebDriver driver) {
         super(driver);
     }
+
     @FindBy(xpath = "//div[@id='js-product-list-header']//h1[@class='h1']")
     private WebElement categoryName;
     @FindBy(css = "div#js-product-list-top p")

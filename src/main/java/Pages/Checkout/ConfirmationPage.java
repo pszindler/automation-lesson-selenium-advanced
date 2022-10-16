@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import static Helpers.UrlProvider.ORDER_HISTORY_URL;
+
 public class ConfirmationPage extends BasePage {
     public ConfirmationPage(WebDriver driver) {
         super(driver);
@@ -26,18 +28,17 @@ public class ConfirmationPage extends BasePage {
     private WebElement checkPaymentsDetails;
     @FindBy(css = "div#order-details > ul > li:nth-of-type(1)")
     private WebElement orderReferenceNumber;
-    private final String orderHistoryLink = "http://146.59.32.4/index.php?controller=history";
 
     public String getProductName() {
         return productName.getText().split("-")[0].strip();
     }
 
     public double getProductPrice() {
-        return Double.parseDouble(unitPrice.getText().replace("$", ""));
+        return getProductPrice(unitPrice);
     }
 
     public double getTotalPrice() {
-        return Double.parseDouble(totalPrice.getText().replace("$", ""));
+        return getProductPrice(totalPrice);
     }
 
     public String getShippingMethod() {
@@ -45,15 +46,15 @@ public class ConfirmationPage extends BasePage {
     }
 
     public String getPaymentMethod() {
-        return paymentMethod.getText().split(":")[1].strip();
+        return getTextAfterColon(paymentMethod);
     }
 
     public String getOrderReferenceNumber() {
-        return orderReferenceNumber.getText().split(":")[1].strip();
+        return getTextAfterColon(orderReferenceNumber);
     }
 
     public ConfirmationPage goToOrderHistory() {
-        driver.get(orderHistoryLink);
+        driver.get(ORDER_HISTORY_URL);
         return this;
     }
 

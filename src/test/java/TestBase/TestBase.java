@@ -11,6 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 
 import java.util.logging.Level;
 
+import static Helpers.UrlProvider.BASE_URL;
+
 public class TestBase {
      protected WebDriver driver;
 
@@ -25,7 +27,7 @@ public class TestBase {
     @BeforeEach
     void setup() {
         driver = new DriverFactory().createInstance();
-        driver.get("http://146.59.32.4/index.php");
+        driver.get(BASE_URL);
     }
 
     @AfterEach

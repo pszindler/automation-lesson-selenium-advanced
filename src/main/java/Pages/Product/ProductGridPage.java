@@ -30,17 +30,17 @@ public class ProductGridPage extends BasePage {
         return products;
     }
 
-    public ProductGridPage clickOnProductByName(String productName) {
+    public ProductDetailsPage getProductByName(String productName) {
         driver.findElement(By.linkText(productName)).click();
-        return this;
+        return new ProductDetailsPage(driver);
     }
 
-    public void getRandomProduct() {
+    public void openRandomProduct() {
         List<SingleProductFromGrid> products = getListOfProducts();
         String title = products
                 .get(new Random().nextInt(products.size()))
                 .getProductTitle();
-        clickOnProductByName(title);
+        getProductByName(title);
     }
 
 }

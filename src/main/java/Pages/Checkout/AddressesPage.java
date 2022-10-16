@@ -1,5 +1,6 @@
 package Pages.Checkout;
 
+import Models.Address.Address;
 import Pages.BasePage.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,12 +24,12 @@ public class AddressesPage extends BasePage {
     @FindBy(css = "article:nth-of-type(2)  .delete-address.text-muted")
     private WebElement deleteShippingAddress;
 
-    public void setAddInvoiceAddressForm() {
+    public void setAddInvoiceAddressForm(Address address) {
         deleteShippingAddress.click();
         addInvoiceAddressFormBtn.click();
-        addressInput.sendKeys("Orzechowska 21");
-        zipcodeInput.sendKeys("44-119");
-        cityInput.sendKeys("KTW");
+        addressInput.sendKeys(address.getAddress());
+        zipcodeInput.sendKeys(address.getZipCode());
+        cityInput.sendKeys(address.getCity());
         continueBtn.click();
     }
 }

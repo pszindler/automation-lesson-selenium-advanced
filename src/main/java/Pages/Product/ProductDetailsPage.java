@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import static Helpers.WebElementsHelper.isElementVisible;
 
 public class ProductDetailsPage extends BasePage {
     public ProductDetailsPage(WebDriver driver) {

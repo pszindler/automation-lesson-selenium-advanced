@@ -1,5 +1,7 @@
 package Pages.Cart;
 
+import Models.MyShop.Product;
+import Models.MyShop.ShoppingCart;
 import Pages.BasePage.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,7 +25,7 @@ public class CartPage extends BasePage {
     private WebElement proceedToCheckoutBtn;
 
     public double totalItemsPrice() {
-        return Double.parseDouble(totalItemsPrice.getText().replace("$", ""));
+        return getProductPrice(totalItemsPrice);
     }
 
     public List<CartProduct> getListOfProductsInCart() {
@@ -39,6 +41,12 @@ public class CartPage extends BasePage {
         driver.get(cartLink);
     }
 
+    public String deleteItem(int item) {
+        List<CartProduct> cartProducts = getListOfProductsInCart();
+        String productNameToDelete = cartProducts.get(item).getProductTitle();
+        cartProducts.get(item).deleteItem();
+        return productNameToDelete;
+    }
 
     public CartProduct getProductFromCartByName(List<CartProduct> products, String productName) {
         return products.stream().filter(p -> p.getProductTitle().equals(productName)).findFirst().orElse(null);
@@ -50,6 +58,14 @@ public class CartPage extends BasePage {
 
     public void proceedToCheckout() {
         proceedToCheckoutBtn.click();
+    }
+
+    public ShoppingCart toShoppingCart() {
+        ShoppingCart shoppingCart = new ShoppingCart();
+        for (CartProduct product : getListOfProductsInCart()) {
+            shoppingCart.addItem(new Product(product), product.getQuantity());
+        }
+        return shoppingCart;
     }
 
 

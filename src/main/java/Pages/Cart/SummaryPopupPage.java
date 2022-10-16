@@ -1,6 +1,7 @@
 package Pages.Cart;
 
 import Pages.BasePage.BasePage;
+import Pages.Product.ProductDetailsPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -50,16 +51,16 @@ public class SummaryPopupPage extends BasePage {
         return Integer.parseInt(quantity.getText().replaceAll("[^0-9]", ""));
     }
 
-    public SummaryPopupPage continueShopping() {
+    public ProductDetailsPage continueShopping() {
         wait.until(ExpectedConditions.visibilityOf(continueShoppingBtn));
         continueShoppingBtn.click();
-        return this;
+        return new ProductDetailsPage(driver);
     }
 
-    public SummaryPopupPage proceedToCheckoutOrder() {
+    public CartPage proceedToCheckoutOrder() {
         wait.until(ExpectedConditions.visibilityOf(proceedToCheckoutBtn));
         proceedToCheckoutBtn.click();
-        return this;
+        return new CartPage(driver);
     }
 
     public void waitForPopUp() {

@@ -1,4 +1,4 @@
-activeEnvironment: prod
+activeEnvironment: lab
 
 browser:
     browserInUse: chrome
@@ -11,9 +11,9 @@ browser:
 environment:
   lab:
     envName: lab
-    appUrl: https://www.selenium.dev
-    title: Selenium
+    appUrl: http://146.59.32.4/
+    title: TesterSii
   prod:
     envName: prod
-    appUrl: https://logback.qos.ch/
-    title: Logback Home
+    appUrl: http://146.59.32.12/
+    title: TesterSii
