@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22a64a02-7fa6-4d9f-9e3c-f8573dff23ec" name="Changes" comment="poprawka">
-      <change afterPath="$PROJECT_DIR$/allure-results/categories.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Helpers/ScreenShotCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/AllureListener.java" afterDir="false" />
+    <list default="true" id="22a64a02-7fa6-4d9f-9e3c-f8573dff23ec" name="Changes" comment="fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Config/AllureEnvironment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Config/AllureEnvironment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Config/AppPropertiesSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Config/AppPropertiesSingleton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Config/YamlReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Config/YamlReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/WebDriverDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/WebDriverDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/BasePage/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/BasePage/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BasketAndCheckoutTests/BasketTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasketAndCheckoutTests/BasketTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ProductAndCategoriesTests/ProductAndCategoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProductAndCategoriesTests/ProductAndCategoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SearchTests/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SearchTests/SearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -376,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666604843306</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="fixes">
+      <created>1666623528969</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1666623528969</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -404,7 +398,8 @@
     <MESSAGE value="masowe poprawki po review Mateusza :)" />
     <MESSAGE value="allure project" />
     <MESSAGE value="poprawka" />
-    <option name="LAST_COMMIT_MESSAGE" value="poprawka" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

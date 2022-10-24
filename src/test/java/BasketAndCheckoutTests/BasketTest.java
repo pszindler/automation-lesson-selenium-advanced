@@ -34,7 +34,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class BasketTest extends Pages {
 
     @ParameterizedTest
-    @ValueSource(ints = {-2, 1})
+    @ValueSource(ints = {1, 2, 5})
     @Issue("288")
     @Flaky
     @Severity(SeverityLevel.CRITICAL)
