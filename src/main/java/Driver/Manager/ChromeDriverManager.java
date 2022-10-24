@@ -13,7 +13,7 @@ public class ChromeDriverManager implements Factory {
     public WebDriver createDriver() {
         WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--fullscreen-mode");
+        chromeOptions.addArguments("--fullscreen-mode", "--headless");
         return new ChromeDriver(chromeOptions);
     }
 }

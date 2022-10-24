@@ -15,8 +15,7 @@ import java.util.List;
 import java.util.Random;
 
 public class BasePage {
-
-
+    private static final Logger logger = LoggerFactory.getLogger(BasePage.class);
     static final Duration TIMEOUT = Duration.ofSeconds(Integer.parseInt(System.getProperty("webElementTimeout")));
     static final Duration POOLING = Duration.ofMillis(Integer.parseInt(System.getProperty("webElementPooling")));
 
@@ -38,6 +37,7 @@ public class BasePage {
         this.driver = driver;
         wait = new WebDriverWait(driver, TIMEOUT, POOLING);
         actions = new Actions(driver);
+        logger.debug("Created WebDriverWait with timeout: " + TIMEOUT + "s and sleep: " + POOLING + "ms");
     }
 
     public void pointOnElement(WebElement element) {

@@ -34,10 +34,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class BasketTest extends Pages {
 
     @ParameterizedTest
+    @ValueSource(ints = {-2, 1})
+    @Issue("288")
     @Flaky
-    @ValueSource(ints = {-2})
-    @Story("User tries to add bla bla bla")
-    @Description("Valid test of adding poster to cart")
+    @Severity(SeverityLevel.CRITICAL)
+    @Story("Customer adds product x times to cart")
+    @Description("The customer goes to the art category and adds the poster," +
+            " the data that is displayed after adding to the cart is verified")
     void popupCheckTest(int quantity) {
         ShoppingCart shoppingCart = new ShoppingCart();
         at(HeaderNavigationPage.class).goToCategory("ART");
@@ -64,8 +67,9 @@ public class BasketTest extends Pages {
     }
 
     @Test
-    @Story("Test o dupie")
-    @Description("Testowanie dupy")
+    @Story("User adds and removes products from the cart")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Generic test, tests addition and deletion of products, checks correct data.")
     void basketCheckTest() {
         ShoppingCart expectedShoppingCart = new ShoppingCart();
 
@@ -96,8 +100,9 @@ public class BasketTest extends Pages {
 
     @Test
     @Flaky
-    @Story("Najgorszy test swiata")
-    @Description("ALE DZIALA")
+    @Story("Test checks orders")
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("User creates orders and then checks their status ")
     void checkOutTest() {
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");

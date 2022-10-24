@@ -1,4 +1,4 @@
-activeEnvironment: lab
+activeEnvironment: prod
 
 browser:
     browserInUse: chrome
@@ -15,5 +15,5 @@ environment:
     title: TesterSii
   prod:
     envName: prod
-    appUrl: http://146.59.32.12/
+    appUrl: http://146.59.32.4/
     title: TesterSii

@@ -7,6 +7,7 @@ import Pages.Home.HeaderNavigationPage;
 import Pages.Product.ProductGridPage;
 import Pages.Product.SingleProductFromGrid;
 import TestBase.Pages;
+import io.qameta.allure.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -18,10 +19,15 @@ import java.util.stream.Stream;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
+@Epic("Products and Category Tests")
+@Feature("Correct scenario features")
 public class ProductAndCategoryTest extends Pages {
 
     @ParameterizedTest
     @ValueSource(ints = {0, 1})
+    @Story("User checks for correct category names")
+    @Severity(SeverityLevel.MINOR)
+    @Description("Verification of categories and sub-categories")
     void checkIfCategoryHaveCorrectNameWhenOpened(int depthLevel) {
         HeaderNavigationPage headerNavigationPage = new HeaderNavigationPage(driver);
         ProductGridPage productGridPage = new ProductGridPage(driver);
@@ -41,6 +47,9 @@ public class ProductAndCategoryTest extends Pages {
 
     @ParameterizedTest
     @MethodSource("intsListProvider")
+    @Story("The user is looking for an item in a given price range")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("The filter (slider) is checked to see if it correctly filters the items on the page")
     void checkIfFilterIsWorkingCorrectly(int minPrice, int maxPrice) {
         HeaderNavigationPage headerNavigationPage = new HeaderNavigationPage(driver);
         ProductGridPage productGridPage = new ProductGridPage(driver);

@@ -9,8 +9,8 @@ public class WebDriverDTO {
     private final String platformName;
 
     public WebDriverDTO(String browserVersion, String browserName, Platform platformName) {
-        this.browserName = browserName;
         this.browserVersion = browserVersion;
+        this.browserName = browserName;
         this.platformName = String.valueOf(platformName);
     }
 }
