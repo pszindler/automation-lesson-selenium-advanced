@@ -2,36 +2,44 @@ package TestBase;
 
 import Config.AppPropertiesSingleton;
 import Driver.DriverFactory;
-
+import Models.WebDriverDTO;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriverService;
-
-import java.util.logging.Level;
 
 import static Helpers.UrlProvider.BASE_URL;
 
+@ExtendWith(Listener.class)
 public class TestBase {
-     protected WebDriver driver;
+
+    protected WebDriver driver;
+
+
+    private static WebDriverDTO webDriverDTO;
+
 
     @BeforeAll
-
-    static void beforeAll() {
+    public static void beforeAll() {
         AppPropertiesSingleton.getInstance();
-        java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
-        System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
-     }
+    }
 
     @BeforeEach
-    void setup() {
-        driver = new DriverFactory().createInstance();
+    public void setup(WebDriver driver) {
         driver.get(BASE_URL);
     }
 
     @AfterEach
-    void teardown() {
+    public void teardown(WebDriver driver) {
         driver.quit();
     }
+
+
+//    @AfterAll
+//    public static void finallyTearDown() {
+//        generateEnvironmentVariablesForAllure(webDriverDTO);
+//    }
+
 }
+

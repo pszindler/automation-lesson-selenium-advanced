@@ -12,7 +12,7 @@ public class SummaryPopupPage extends BasePage {
         super(driver);
     }
 
-    @FindBy(css = "[class='col-md-5 divide-right'] .product-quantity")
+    @FindBy(css = ".product-quantity strong")
     private WebElement quantity;
     @FindBy(css = ".product-name")
     private WebElement productName;
@@ -20,7 +20,7 @@ public class SummaryPopupPage extends BasePage {
     private WebElement totalItemsInCartText;
     @FindBy(css = ".subtotal.value")
     private WebElement subtotalValue;
-    @FindBy(css = "[class='col-md-5 divide-right'] .product-price")
+    @FindBy(css = ".modal-body .product-price")
     private WebElement productPrice;
     @FindBy(css = ".btn.btn-secondary")
     private WebElement continueShoppingBtn;

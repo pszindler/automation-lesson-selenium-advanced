@@ -1,6 +1,7 @@
 package TestBase;
 
 import Pages.BasePage.BasePage;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public abstract class Pages extends TestBase {

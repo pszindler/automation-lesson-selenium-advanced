@@ -4,6 +4,7 @@ import Pages.BasePage.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HeaderTopPage extends BasePage {
 
@@ -21,6 +22,7 @@ public class HeaderTopPage extends BasePage {
     private WebElement accountBtn;
 
     public int getCartCounter() {
+        wait.until(ExpectedConditions.visibilityOf(cartCounter));
         return Integer.parseInt(cartCounter.getText().replaceAll("[^0-9]", ""));
     }
 

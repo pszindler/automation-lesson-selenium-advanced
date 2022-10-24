@@ -1,9 +1,11 @@
 package Config;
 
 import Models.YamlClasses.EnvironmentModel;
+import org.openqa.selenium.chrome.ChromeDriverService;
 
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
 
 public final class AppPropertiesSingleton {
     private static AppPropertiesSingleton INSTANCE;
@@ -12,6 +14,12 @@ public final class AppPropertiesSingleton {
     private AppPropertiesSingleton() {
         setEnvironmentProperties();
         setBrowserProperties();
+        setLoggingProperties();
+    }
+
+    private void setLoggingProperties() {
+        java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
+        System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
     }
 
     private void setEnvironmentProperties() {

@@ -19,7 +19,7 @@ public class ProductDetailsPage extends BasePage {
         super(driver);
     }
 
-    @FindBy(css = ".h1")
+    @FindBy(css = "h1[itemprop=name]")
     private WebElement productTitle;
     @FindBy(css = "[itemprop='price']")
     private WebElement productPrice;
@@ -35,7 +35,6 @@ public class ProductDetailsPage extends BasePage {
     List<Product> productCarts = new ArrayList<>();
 
     public String getProductTitle() {
-        wait.until(ExpectedConditions.visibilityOf(productTitle));
         return productTitle.getText();
     }
 
@@ -44,11 +43,11 @@ public class ProductDetailsPage extends BasePage {
     }
 
     public Product addToCart(int userQuantity) {
-        SummaryPopupPage popupPage = new SummaryPopupPage(driver);
-        setQuantity(userQuantity);
         checkIfAddToCartButtonIsClickable();
+        setQuantity(userQuantity);
+        String productName = getProductTitle();
+        String productPrice = getProductPrice();
         addToCartButton.click();
-        popupPage.waitForPopUp();
         return new Product(getProductTitle(), getProductPrice());
     }
 

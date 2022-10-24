@@ -28,7 +28,7 @@ public class OrderHistoryRow extends BasePage {
     }
 
     public String getPayment() {
-        return paymentType.getText();
+        return paymentType.getAttribute("innerHTML");
     }
 
     public String getOrderDate() {

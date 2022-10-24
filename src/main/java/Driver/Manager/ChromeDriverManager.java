@@ -13,7 +13,7 @@ public class ChromeDriverManager implements Factory {
     public WebDriver createDriver() {
         WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--start-maximized");
+        chromeOptions.addArguments("--fullscreen-mode");
         return new ChromeDriver(chromeOptions);
     }
 }

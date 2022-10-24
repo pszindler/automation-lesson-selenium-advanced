@@ -17,12 +17,11 @@ import Pages.Home.HeaderTopPage;
 import Pages.Home.SignInPage;
 import Pages.Product.ProductDetailsPage;
 import Pages.Product.ProductGridPage;
+import TestBase.Listener;
 import TestBase.Pages;
-import io.qameta.allure.Description;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Story;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.RegisterExtension;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -31,12 +30,14 @@ import java.util.Date;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+
 @Epic("Basket Tests")
 @Feature("Correct scenario features")
 public class BasketTest extends Pages {
 
     @ParameterizedTest
-    @ValueSource(ints = {5, 6, 1, 8, 12})
+    @Flaky
+    @ValueSource(ints = {-2})
     @Story("User tries to add bla bla bla")
     @Description("Valid test of adding poster to cart")
     void popupCheckTest(int quantity) {
@@ -48,6 +49,7 @@ public class BasketTest extends Pages {
         Product product = at(ProductDetailsPage.class).addToCart(quantity);
         shoppingCart.addItem(product, quantity);
 
+        at(SummaryPopupPage.class).waitForPopUp();
         assertThat(product.getPrice()).isEqualTo(at(SummaryPopupPage.class).getProductPrice());
         assertThat(shoppingCart.get(product)).isEqualTo(at(SummaryPopupPage.class).getProductQuantity());
         assertThat(product.getTitle()).isEqualTo(at(SummaryPopupPage.class).getProductName());
@@ -95,6 +97,7 @@ public class BasketTest extends Pages {
     }
 
     @Test
+    @Flaky
     @Story("Najgorszy test swiata")
     @Description("ALE DZIALA")
     void checkOutTest() {
