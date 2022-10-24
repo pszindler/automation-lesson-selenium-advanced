@@ -17,11 +17,9 @@ import Pages.Home.HeaderTopPage;
 import Pages.Home.SignInPage;
 import Pages.Product.ProductDetailsPage;
 import Pages.Product.ProductGridPage;
-import TestBase.Listener;
 import TestBase.Pages;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.RegisterExtension;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 

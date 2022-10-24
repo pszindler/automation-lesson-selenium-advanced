@@ -11,7 +11,6 @@ import org.openqa.selenium.WebDriver;
 
 import static Helpers.UrlProvider.BASE_URL;
 
-@ExtendWith(Listener.class)
 public class TestBase {
 
     protected WebDriver driver;
@@ -26,12 +25,13 @@ public class TestBase {
     }
 
     @BeforeEach
-    public void setup(WebDriver driver) {
+    public void setup() {
+        this.driver = new DriverFactory().createInstance();
         driver.get(BASE_URL);
     }
 
     @AfterEach
-    public void teardown(WebDriver driver) {
+    public void teardown() {
         driver.quit();
     }
 

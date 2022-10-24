@@ -4,23 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22a64a02-7fa6-4d9f-9e3c-f8573dff23ec" name="Changes" comment="masowe poprawki po review Mateusza :)">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Config/AllureEnvironment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/WebDriverDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/junit-platform.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestBase/Listener.java" afterDir="false" />
+    <list default="true" id="22a64a02-7fa6-4d9f-9e3c-f8573dff23ec" name="Changes" comment="allure project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Config/AppPropertiesSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Config/AppPropertiesSingleton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Driver/Manager/ChromeDriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Driver/Manager/ChromeDriverManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Account/OrderHistoryRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Account/OrderHistoryRow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/BasePage/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/BasePage/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Cart/SummaryPopupPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Cart/SummaryPopupPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Home/HeaderTopPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Home/HeaderTopPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Product/ProductDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Product/ProductDetailsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BasketAndCheckoutTests/BasketTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasketAndCheckoutTests/BasketTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase/Pages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase/Listener.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestBase/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +78,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BasketTest">
+  <component name="RunManager" selected="JUnit.ProductAndCategoryTest.checkIfCategoryHaveCorrectNameWhenOpened">
     <configuration name="BasketTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project-with-darek" />
       <extension name="coverage">
@@ -107,22 +94,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BasketTest.basketCheckTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project-with-darek" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="BasketAndCheckoutTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="BasketAndCheckoutTests" />
-      <option name="MAIN_CLASS_NAME" value="BasketAndCheckoutTests.BasketTest" />
-      <option name="METHOD_NAME" value="basketCheckTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BasketTest.popupCheckTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project-with-darek" />
       <extension name="coverage">
@@ -134,6 +105,22 @@
       <option name="PACKAGE_NAME" value="BasketAndCheckoutTests" />
       <option name="MAIN_CLASS_NAME" value="BasketAndCheckoutTests.BasketTest" />
       <option name="METHOD_NAME" value="popupCheckTest(int)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductAndCategoryTest.checkIfCategoryHaveCorrectNameWhenOpened" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project-with-darek" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProductAndCategoriesTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ProductAndCategoriesTests" />
+      <option name="MAIN_CLASS_NAME" value="ProductAndCategoriesTests.ProductAndCategoryTest" />
+      <option name="METHOD_NAME" value="checkIfCategoryHaveCorrectNameWhenOpened(int)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -173,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductAndCategoryTest.checkIfCategoryHaveCorrectNameWhenOpened" />
         <item itemvalue="JUnit.BasketTest" />
         <item itemvalue="JUnit.BasketTest.popupCheckTest" />
         <item itemvalue="JUnit.TestBaseTwo.screenshotTest" />
         <item itemvalue="JUnit.TestBaseTwo.screenshotTest (1)" />
-        <item itemvalue="JUnit.BasketTest.basketCheckTest" />
       </list>
     </recent_temporary>
   </component>
@@ -365,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665957764628</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="allure project">
+      <created>1666604459641</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1666604459641</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -391,7 +385,8 @@
     <MESSAGE value="final" />
     <MESSAGE value="poprawka na porownywanie obiektow" />
     <MESSAGE value="masowe poprawki po review Mateusza :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="masowe poprawki po review Mateusza :)" />
+    <MESSAGE value="allure project" />
+    <option name="LAST_COMMIT_MESSAGE" value="allure project" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
