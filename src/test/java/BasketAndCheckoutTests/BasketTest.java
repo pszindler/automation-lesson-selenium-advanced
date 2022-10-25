@@ -36,7 +36,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class BasketTest extends Pages {
 
     @RegisterExtension
-    ScreenShotWatcher screenShotWatcher = new ScreenShotWatcher(driver);
+    ScreenShotWatcher screenShotWatcher = new ScreenShotWatcher();
 
     @ParameterizedTest
     @ValueSource(ints = {1, 2, 5, -2})
@@ -56,11 +56,11 @@ public class BasketTest extends Pages {
         shoppingCart.addItem(product, quantity);
 
         at(SummaryPopupPage.class).waitForPopUp();
-        assertThat(product.getPrice()).isEqualTo(at(SummaryPopupPage.class).getProductPrice());
-        assertThat(shoppingCart.get(product)).isEqualTo(at(SummaryPopupPage.class).getProductQuantity());
-        assertThat(product.getTitle()).isEqualTo(at(SummaryPopupPage.class).getProductName());
-        assertThat(shoppingCart.getTotalOrderValue()).isEqualTo(at(SummaryPopupPage.class).getSubTotal());
-        assertThat(getExpectedCartItemMsg(quantity)).isEqualTo(at(SummaryPopupPage.class).getTotalItemsInCartText());
+        assertThat(at(SummaryPopupPage.class).getProductPrice()).isEqualTo(product.getPrice());
+        assertThat(at(SummaryPopupPage.class).getProductQuantity()).isEqualTo(shoppingCart.get(product));
+        assertThat(at(SummaryPopupPage.class).getProductName()).isEqualTo(product.getTitle());
+        assertThat(at(SummaryPopupPage.class).getSubTotal()).isEqualTo(shoppingCart.getTotalOrderValue());
+        assertThat(at(SummaryPopupPage.class).getTotalItemsInCartText()).isEqualTo(getExpectedCartItemMsg(quantity));
 
         at(SummaryPopupPage.class).continueShopping();
         int count = at(HeaderTopPage.class).getCartCounter();

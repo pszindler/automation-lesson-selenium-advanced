@@ -1,16 +1,16 @@
 package TestBase;
 
 import Config.AppPropertiesSingleton;
-import Driver.DriverFactory;
-import Helpers.ScreenShotCreator;
 import Models.WebDriverDTO;
-import junit.framework.TestResult;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.annotations.AfterTest;
 
 import static Config.AllureEnvironment.generateEnvironmentVariablesForAllure;
 import static Helpers.UrlProvider.BASE_URL;
@@ -20,7 +20,6 @@ public class TestBase {
     protected WebDriver driver;
     private static WebDriverDTO webDriverDTO;
 
-
     @BeforeAll
     public static void beforeAll() {
         AppPropertiesSingleton.getInstance();
@@ -28,7 +27,8 @@ public class TestBase {
 
     @BeforeEach
     public void setup() {
-        driver = new DriverFactory().createInstance();
+        WebDriverFactoryStaticThreadLocal.setDriver();
+        this.driver = WebDriverFactoryStaticThreadLocal.getDriver();
         logger.info("Driver initiated properly");
         if (webDriverDTO == null) {
             Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
@@ -39,13 +39,14 @@ public class TestBase {
         logger.info("Driver reach base url: {}", BASE_URL);
     }
 
-    @AfterEach
-    public void teardown() {
+    @AfterTest
+    public void tearDown() {
+        WebDriverFactoryStaticThreadLocal.closeBrowser();
         logger.info("Driver closed properly");
     }
 
     @AfterAll
-    public static void finallyTearDown() {
+    public static void afterAll() {
         generateEnvironmentVariablesForAllure(webDriverDTO);
         logger.info("Environment xml has been loaded");
     }

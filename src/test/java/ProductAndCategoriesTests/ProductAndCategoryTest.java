@@ -24,8 +24,9 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 @Epic("Products and Category Tests")
 @Feature("Correct scenario features")
 public class ProductAndCategoryTest extends Pages {
+
     @RegisterExtension
-    ScreenShotWatcher screenShotWatcher = new ScreenShotWatcher(driver);
+    ScreenShotWatcher screenShotWatcher = new ScreenShotWatcher();
 
     @ParameterizedTest
     @ValueSource(ints = {0, 1})
@@ -62,7 +63,7 @@ public class ProductAndCategoryTest extends Pages {
         headerNavigationPage.goToCategory("ACCESSORIES");
         filterPage.moveSliderToPrice(minPrice, maxPrice);
         List<SingleProductFromGrid> products = productGridPage.getListOfProducts();
-        for (SingleProductFromGrid product: products) {
+        for (SingleProductFromGrid product : products) {
             assertThat(product.getProductPrice()).isGreaterThan(minPrice);
             assertThat(product.getProductPrice()).isLessThan(maxPrice);
         }
@@ -75,9 +76,9 @@ public class ProductAndCategoryTest extends Pages {
 
     static Stream<Arguments> intsListProvider() {
         return Stream.of(
-                arguments(13,16),
-                arguments(15,19),
-                arguments(11,13)
+                arguments(13, 16),
+                arguments(15, 19),
+                arguments(11, 13)
         );
     }
 }

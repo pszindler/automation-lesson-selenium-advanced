@@ -15,11 +15,14 @@ import org.junit.jupiter.params.provider.ValueSource;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+
 @Epic("Search Tests")
 @Feature("Correct scenario features")
 public class SearchTest extends Pages {
+
     @RegisterExtension
-    ScreenShotWatcher screenShotWatcher = new ScreenShotWatcher(driver);
+    ScreenShotWatcher screenShotWatcher = new ScreenShotWatcher();
+
     @Test
     @Story("Searching for an item")
     @Severity(SeverityLevel.TRIVIAL)
