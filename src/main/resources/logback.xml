@@ -1,0 +1,49 @@
+<configuration scan="true">
+    <property name="DEV_HOME" value="${user.dir}/log"/>
+    <property name="FILE_NAME" value="WebsiteRegressionTestLog"/>
+
+    <timestamp key="bySecond" datePattern="yyyyMMdd'T'HHmmss"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %magenta{yyyy-MM-dd HH:mm:ss} %yellow([%thread]) %highlight(%-5level) - %blue(%-20logger{20}) %highlight( %msg%n)
+            </Pattern>
+        </layout>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${DEV_HOME}/${FILE_NAME}_${bySecond}.log</file>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${DEV_HOME}/${FILE_NAME}.%d{yyyy-MM-dd-HH-mm}.zip</fileNamePattern>
+            <maxHistory>3</maxHistory>
+            <totalSizeCap>30KB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>[%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+
+    </appender>
+
+    <appender name="HTML" class="ch.qos.logback.core.FileAppender">
+        <file>${DEV_HOME}/${FILE_NAME}_${bySecond}_log.html</file>
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="ch.qos.logback.classic.html.HTMLLayout">
+                <pattern>%thread%level%logger%msg</pattern>
+            </layout>
+        </encoder>
+    </appender>
+
+
+    <logger name="adrianczarnowski">
+        <appender-ref ref="FILE"/>
+    </logger>
+
+
+    <root level="info">
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="HTML"/>
+    </root>
+</configuration>
