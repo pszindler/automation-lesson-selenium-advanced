@@ -19,9 +19,11 @@ public class ScreenShotCreator {
 
     public static void takeScreenShot(WebDriver driver) {
         try {
-            File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            Allure.addAttachment(fileNameGenerator(), FileUtils.openInputStream(screenshotFile));
-            logger.info("Screenshot added to report");
+            if (driver != null) {
+                File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+                Allure.addAttachment(fileNameGenerator(), FileUtils.openInputStream(screenshotFile));
+                logger.info("Screenshot added to report");
+            }
         } catch (IOException e) {
             e.printStackTrace();
             logger.error("Could not make a screenshot");

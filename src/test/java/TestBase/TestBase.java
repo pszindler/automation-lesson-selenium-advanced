@@ -4,10 +4,8 @@ import Config.AppPropertiesSingleton;
 import Driver.DriverFactory;
 import Helpers.ScreenShotCreator;
 import Models.WebDriverDTO;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
+import junit.framework.TestResult;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -43,8 +41,6 @@ public class TestBase {
 
     @AfterEach
     public void teardown() {
-        ScreenShotCreator.takeScreenShot(driver);
-        driver.quit();
         logger.info("Driver closed properly");
     }
 

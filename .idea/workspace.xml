@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22a64a02-7fa6-4d9f-9e3c-f8573dff23ec" name="Changes" comment="logback">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Calculator.java" afterDir="false" />
+    <list default="true" id="22a64a02-7fa6-4d9f-9e3c-f8573dff23ec" name="Changes" comment="logback fixes">
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestBase/ScreenShotWatcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Config/AppPropertiesSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Config/AppPropertiesSingleton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Calculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Helpers/ScreenShotCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Helpers/ScreenShotCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BasketAndCheckoutTests/BasketTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasketAndCheckoutTests/BasketTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ProductAndCategoriesTests/ProductAndCategoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProductAndCategoriesTests/ProductAndCategoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SearchTests/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SearchTests/SearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +83,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProductAndCategoryTest.checkIfCategoryHaveCorrectNameWhenOpened">
+  <component name="RunManager" selected="JUnit.BasketTest">
     <configuration name="BasketTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project-with-darek" />
       <extension name="coverage">
@@ -161,8 +165,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ProductAndCategoryTest.checkIfCategoryHaveCorrectNameWhenOpened" />
         <item itemvalue="JUnit.BasketTest" />
+        <item itemvalue="JUnit.ProductAndCategoryTest.checkIfCategoryHaveCorrectNameWhenOpened" />
         <item itemvalue="JUnit.BasketTest.popupCheckTest" />
         <item itemvalue="JUnit.TestBaseTwo.screenshotTest" />
         <item itemvalue="JUnit.TestBaseTwo.screenshotTest (1)" />
@@ -388,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666688725068</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="logback fixes">
+      <created>1666692965142</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1666692965142</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -418,7 +429,8 @@
     <MESSAGE value="poprawka" />
     <MESSAGE value="fixes" />
     <MESSAGE value="logback" />
-    <option name="LAST_COMMIT_MESSAGE" value="logback" />
+    <MESSAGE value="logback fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="logback fixes" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

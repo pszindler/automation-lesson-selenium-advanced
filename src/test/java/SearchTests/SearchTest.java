@@ -5,8 +5,10 @@ import Pages.Product.ProductGridPage;
 import Pages.Product.SingleProductFromGrid;
 import Pages.SearchPage.SearchResultPage;
 import TestBase.Pages;
+import TestBase.ScreenShotWatcher;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.RegisterExtension;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -16,6 +18,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Epic("Search Tests")
 @Feature("Correct scenario features")
 public class SearchTest extends Pages {
+    @RegisterExtension
+    ScreenShotWatcher screenShotWatcher = new ScreenShotWatcher(driver);
     @Test
     @Story("Searching for an item")
     @Severity(SeverityLevel.TRIVIAL)
