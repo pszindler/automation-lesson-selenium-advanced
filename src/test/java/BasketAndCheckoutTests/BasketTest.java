@@ -21,7 +21,7 @@ import TestBase.Pages;
 import TestBase.ScreenShotWatcher;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.RegisterExtension;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -30,13 +30,10 @@ import java.util.Date;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-
 @Epic("Basket Tests")
 @Feature("Correct scenario features")
+@ExtendWith(ScreenShotWatcher.class)
 public class BasketTest extends Pages {
-
-    @RegisterExtension
-    ScreenShotWatcher screenShotWatcher = new ScreenShotWatcher();
 
     @ParameterizedTest
     @ValueSource(ints = {1, 2, 5, -2})

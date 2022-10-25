@@ -9,7 +9,7 @@ import Pages.Product.SingleProductFromGrid;
 import TestBase.Pages;
 import TestBase.ScreenShotWatcher;
 import io.qameta.allure.*;
-import org.junit.jupiter.api.extension.RegisterExtension;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -23,10 +23,8 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @Epic("Products and Category Tests")
 @Feature("Correct scenario features")
+@ExtendWith(ScreenShotWatcher.class)
 public class ProductAndCategoryTest extends Pages {
-
-    @RegisterExtension
-    ScreenShotWatcher screenShotWatcher = new ScreenShotWatcher();
 
     @ParameterizedTest
     @ValueSource(ints = {0, 1})

@@ -24,7 +24,7 @@ public class ScreenShotWatcher implements TestWatcher {
     @Override
     public void testFailed(ExtensionContext context, Throwable throwable) {
         logger.info("Test failed " + context.getDisplayName());
-        ScreenShotCreator.takeScreenShot(WebDriverFactoryStaticThreadLocal.getDriver());
+        ScreenShotCreator.takeScreenShot(WebDriverThreadLocal.getDriver());
     }
 
     @Override

@@ -8,7 +8,7 @@ import TestBase.Pages;
 import TestBase.ScreenShotWatcher;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.RegisterExtension;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -18,10 +18,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @Epic("Search Tests")
 @Feature("Correct scenario features")
+@ExtendWith(ScreenShotWatcher.class)
 public class SearchTest extends Pages {
-
-    @RegisterExtension
-    ScreenShotWatcher screenShotWatcher = new ScreenShotWatcher();
 
     @Test
     @Story("Searching for an item")

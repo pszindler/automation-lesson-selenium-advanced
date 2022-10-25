@@ -3,7 +3,7 @@ package TestBase;
 import Driver.DriverFactory;
 import org.openqa.selenium.WebDriver;
 
-public class WebDriverFactoryStaticThreadLocal {
+public class WebDriverThreadLocal {
 
     private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 

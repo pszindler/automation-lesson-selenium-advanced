@@ -27,8 +27,8 @@ public class TestBase {
 
     @BeforeEach
     public void setup() {
-        WebDriverFactoryStaticThreadLocal.setDriver();
-        this.driver = WebDriverFactoryStaticThreadLocal.getDriver();
+        WebDriverThreadLocal.setDriver();
+        this.driver = WebDriverThreadLocal.getDriver();
         logger.info("Driver initiated properly");
         if (webDriverDTO == null) {
             Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
@@ -41,7 +41,7 @@ public class TestBase {
 
     @AfterTest
     public void tearDown() {
-        WebDriverFactoryStaticThreadLocal.closeBrowser();
+        WebDriverThreadLocal.closeBrowser();
         logger.info("Driver closed properly");
     }
 
