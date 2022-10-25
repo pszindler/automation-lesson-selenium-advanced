@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.logging.Level;
 
 public final class AppPropertiesSingleton {
-    private static final Logger logger = LoggerFactory.getLogger(AppPropertiesSingleton.class);
+    private static Logger logger = LoggerFactory.getLogger(AppPropertiesSingleton.class);
 
     private static AppPropertiesSingleton INSTANCE;
     YamlReader yamlReader = new YamlReader();

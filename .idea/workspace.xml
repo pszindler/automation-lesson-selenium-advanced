@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22a64a02-7fa6-4d9f-9e3c-f8573dff23ec" name="Changes" comment="fixes">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+    <list default="true" id="22a64a02-7fa6-4d9f-9e3c-f8573dff23ec" name="Changes" comment="logback">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Calculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Config/AppPropertiesSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Config/AppPropertiesSingleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +70,8 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Development\SzkolenieTesterskie\SeleniumModernTester\automation-lesson-selenium-advanced\src\main\resources" />
-      <recent name="C:\Development\SzkolenieTesterskie\SeleniumModernTester\automation-lesson-selenium-advanced\src\test\java\Runners" />
       <recent name="C:\Development\SzkolenieTesterskie\SeleniumModernTester\automation-lesson-selenium-advanced\src\test\resources" />
+      <recent name="C:\Development\SzkolenieTesterskie\SeleniumModernTester\automation-lesson-selenium-advanced\src\test\java\Runners" />
       <recent name="C:\Development\SzkolenieTesterskie\SeleniumModernTester\automation-lesson-selenium-advanced\src\test\java" />
       <recent name="C:\Development\SzkolenieTesterskie\SeleniumModernTester\automation-lesson-selenium-advanced\src\test\resources\features" />
     </key>
@@ -76,7 +79,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BasketTest.popupCheckTest">
+  <component name="RunManager" selected="JUnit.ProductAndCategoryTest.checkIfCategoryHaveCorrectNameWhenOpened">
     <configuration name="BasketTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project-with-darek" />
       <extension name="coverage">
@@ -158,9 +161,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BasketTest.popupCheckTest" />
         <item itemvalue="JUnit.ProductAndCategoryTest.checkIfCategoryHaveCorrectNameWhenOpened" />
         <item itemvalue="JUnit.BasketTest" />
+        <item itemvalue="JUnit.BasketTest.popupCheckTest" />
         <item itemvalue="JUnit.TestBaseTwo.screenshotTest" />
         <item itemvalue="JUnit.TestBaseTwo.screenshotTest (1)" />
       </list>
@@ -378,7 +381,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666631316329</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="logback">
+      <created>1666688725068</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1666688725068</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -407,7 +417,8 @@
     <MESSAGE value="allure project" />
     <MESSAGE value="poprawka" />
     <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+    <MESSAGE value="logback" />
+    <option name="LAST_COMMIT_MESSAGE" value="logback" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
