@@ -39,7 +39,7 @@ public class BasketTest extends Pages {
     ScreenShotWatcher screenShotWatcher = new ScreenShotWatcher(driver);
 
     @ParameterizedTest
-    @ValueSource(ints = {1, 2, 5})
+    @ValueSource(ints = {1, 2, 5, -2})
     @Issue("288")
     @Flaky
     @Severity(SeverityLevel.CRITICAL)
