@@ -7,6 +7,7 @@ import Pages.SearchPage.SearchResultPage;
 import TestBase.Pages;
 import TestBase.ScreenShotWatcher;
 import io.qameta.allure.*;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -41,7 +42,7 @@ public class SearchTest extends Pages {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"HUMMINGBIRD", "MUG", "POSTER"})
+    @ValueSource(strings = {"BREAD"})
     @Story("The user enters the initial letters of the item name")
     @Severity(SeverityLevel.MINOR)
     @Description("Test verifies that specific items from the search list are prompted")

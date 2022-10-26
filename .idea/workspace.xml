@@ -7,11 +7,7 @@
     <list default="true" id="22a64a02-7fa6-4d9f-9e3c-f8573dff23ec" name="Changes" comment="testWatcher working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BasketAndCheckoutTests/BasketTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasketAndCheckoutTests/BasketTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ProductAndCategoriesTests/ProductAndCategoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProductAndCategoriesTests/ProductAndCategoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SearchTests/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SearchTests/SearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase/ScreenShotWatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase/ScreenShotWatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase/WebDriverFactoryStaticThreadLocal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase/WebDriverThreadLocal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +77,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BasketTest">
+  <component name="RunManager" selected="JUnit.BasketTest.checkOutTest">
     <configuration name="BasketTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project-with-darek" />
       <extension name="coverage">
@@ -93,6 +89,22 @@
       <option name="PACKAGE_NAME" value="BasketAndCheckoutTests" />
       <option name="MAIN_CLASS_NAME" value="BasketAndCheckoutTests.BasketTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BasketTest.checkOutTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project-with-darek" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="BasketAndCheckoutTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="BasketAndCheckoutTests" />
+      <option name="MAIN_CLASS_NAME" value="BasketAndCheckoutTests.BasketTest" />
+      <option name="METHOD_NAME" value="checkOutTest(Models.User.User)" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -129,17 +141,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestBaseTwo.screenshotTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchTest.dropDownTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="project-with-darek" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="TestBase.*" />
+          <option name="PATTERN" value="SearchTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="TestBase" />
-      <option name="MAIN_CLASS_NAME" value="TestBase.TestBaseTwo" />
-      <option name="METHOD_NAME" value="screenshotTest(org.openqa.selenium.chrome.ChromeDriver)" />
+      <option name="PACKAGE_NAME" value="SearchTests" />
+      <option name="MAIN_CLASS_NAME" value="SearchTests.SearchTest" />
+      <option name="METHOD_NAME" value="dropDownTest(java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -163,10 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BasketTest.checkOutTest" />
         <item itemvalue="JUnit.BasketTest" />
+        <item itemvalue="JUnit.SearchTest.dropDownTest" />
         <item itemvalue="JUnit.ProductAndCategoryTest.checkIfCategoryHaveCorrectNameWhenOpened" />
         <item itemvalue="JUnit.BasketTest.popupCheckTest" />
-        <item itemvalue="JUnit.TestBaseTwo.screenshotTest" />
       </list>
     </recent_temporary>
   </component>
@@ -424,7 +437,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666701582004</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="testWatcher working">
+      <created>1666727987182</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1666727987182</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
